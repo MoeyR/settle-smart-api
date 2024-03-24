@@ -24,7 +24,7 @@ exports.seed = async function(knex) {
     {
       id: 4,
       user_name: "Lee",
-      user_email: "nbrown3@fc2.com",
+      user_email: "nbrown3@fc3.com",
     },
     {
       id: 5,
