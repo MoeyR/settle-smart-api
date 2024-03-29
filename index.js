@@ -11,9 +11,11 @@ app.use(cors());
 const PORT = process.env.PORT || 5050;
 
 const postsRoutes = require("./routes/posts-routers");
+const commentsRoutes = require("./routes/comments-routers");
 
-// all posts routes
-app.use("/", postsRoutes);
+// all posts and all comments routes
+app.use("/posts", postsRoutes);
+app.use("/comments", commentsRoutes);
 
 app.listen(PORT, ()=>{
     console.log(`running at http://localhost:${PORT}`);

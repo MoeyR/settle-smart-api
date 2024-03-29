@@ -1,8 +1,24 @@
 const router = require("express").Router();
 const postsController = require("../controllers/posts-controller");
-
-router.route("/posts").get(postsController.getPosts);
-router.route("/posts/:id").get(postsController.getOnePost);
+const commentsController = require("../controllers/comments-controller");
 
 
+router
+    .route("/")
+    .get(postsController.getPosts)
+    .post(postsController.addNewPost);
+
+router
+    .route("/:id")
+    .get(postsController.getOnePost);
+
+router
+    .route("/:id/comments")
+    .get(postsController.getPostComments)
+    .post(commentsController.addNewComment);
+
+router
+    .route("/:id/comments/:commentId")
+    .delete(commentsController.removeComment);
+    
 module.exports = router;

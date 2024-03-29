@@ -48,31 +48,61 @@ const getPosts = async (req, res) => {
         
         res.status(200).json(postsData);
     } catch (error) {
-        res.status(500).send(`Unable to fetch posts data: ${error}`)
+        res.status(500).send(`Unable to fetch posts data: ${error}`);
     }
 };
 
 
 const addNewPost = async (req, res) => {
-    const {user_name, post_title, post_content, post_collects, post_image, post_location} = req.body;
+    const {user_id, post_title, post_content, post_collects, post_image, post_location} = req.body;
 
-    if(!post_title || !post_content || !post_collects || !post_image || !post_location){
+    if(!user_id || !post_title || !post_content || !post_image || !post_location){
         return res.status(400).send("Please provide all required fields");
     }
 
     try {
-        const result = await knex("posts").insert(req.body)
-        const newPostId = result[0];
+        const newPost = await knex("posts").insert(req.body);
+        const newPostId = newPost[0];
         const createdPost = await knex("posts").where({id: newPostId});
         
         res.status(201).json(createdPost);
     } catch (error) {
-        res.status(500).send("Error in creating new post");
+        res.status(500).send(`Error in creating new post, ${error}`);
     }
 };
+
+
+//Get all comments for a post
+const getPostComments = async (req, res) => {
+    const postId = req.params.id;
+    try {
+        //Check if post exist
+        const post = await knex("posts").where("id", postId).first();
+        if(!post){
+            return res.status(404).json({message: "Post not found"});
+        }
+        //Retreive all comments for the given post by ID
+        const comments = await knex("comments")
+        .where("post_id", postId)
+        .select(
+            "comments.id",
+            "comments.user_id",
+            "users.user_name",
+            "comments.comment",
+            "comments.comment_likes",
+        )
+        .join("users", "comments.user_id", "users.id")
+
+        res.status(200).json(comments);
+    } catch (error) {
+        res.status(500).send(`Unable to fetch comments data, ${error}`);
+    }
+};
+
 
 module.exports ={
     getOnePost,
     getPosts,
     addNewPost,
+    getPostComments,
 };
