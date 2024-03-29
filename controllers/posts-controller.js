@@ -1,4 +1,6 @@
 const knex = require("knex")(require("../knexfile"));
+const {v4:uuidv4} = require('uuid');
+const multer = require('multer');
 
 const getOnePost = async (req, res) => {
     try {
@@ -53,12 +55,27 @@ const getPosts = async (req, res) => {
 };
 
 
+//Store post image
+const storage = multer.diskStorage({
+    destination: function(req, file, callBackFun){
+        return callBackFun(null, "public/images");
+    },
+    filename: function (req, post_image, callBackFun){
+        return callBackFun(null, `${uuidv4()}_${post_image.originalname}`)
+    }
+});
+
+const upload = multer({storage});
+
 const addNewPost = async (req, res) => {
     const {user_id, post_title, post_content, post_collects, post_image, post_location} = req.body;
 
-    if(!user_id || !post_title || !post_content || !post_image || !post_location){
-        return res.status(400).send("Please provide all required fields");
-    }
+    // if(!user_id || !post_title || !post_content || !post_location){
+    //     return res.status(400).send("Please provide all required fields");
+    // }
+
+    const imageName = req.file.filename;
+    req.body.post_image = `http://localhost:8080/images/${imageName}`;
 
     try {
         const newPost = await knex("posts").insert(req.body);
@@ -105,4 +122,5 @@ module.exports ={
     getPosts,
     addNewPost,
     getPostComments,
+    upload,
 };

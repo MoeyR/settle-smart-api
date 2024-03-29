@@ -6,7 +6,7 @@ const commentsController = require("../controllers/comments-controller");
 router
     .route("/")
     .get(postsController.getPosts)
-    .post(postsController.addNewPost);
+    .post(postsController.upload.single('post_image'), postsController.addNewPost);
 
 router
     .route("/:id")
