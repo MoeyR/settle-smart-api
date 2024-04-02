@@ -20,7 +20,8 @@ const getUserPosts = async (req, res) => {
                 "posts.post_content",
                 "posts.post_collects",
                 "posts.post_image",
-                "posts.post_location"
+                "posts.post_location",
+                "posts.created_at"
         )
         .join("users", "posts.user_id", "users.id")
 

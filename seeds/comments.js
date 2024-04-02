@@ -43,14 +43,14 @@ exports.seed = async function(knex) {
     }, 
     {
       id: 6,
-      post_id: 3,
+      post_id: 15,
       user_id: 5,
       comment:"Both bread and cakes from Wholefood are delicious",
       comment_likes: 4
     }, 
     {
       id: 7,
-      post_id: 3,
+      post_id: 15,
       user_id: 4,
       comment:"It looks like the one I bought from Costoco",
       comment_likes: 6
@@ -183,9 +183,9 @@ exports.seed = async function(knex) {
     }, 
     {
       id: 26,
-      post_id: 15,
+      post_id: 3,
       user_id: 4,
-      comment:"I must go there",
+      comment:"It looks amazing! I'll add it to my list for next the trip.",
       comment_likes: 10
     }, 
     {

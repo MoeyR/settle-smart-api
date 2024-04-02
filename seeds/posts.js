@@ -32,16 +32,15 @@ exports.seed = async function(knex) {
     },
     {
       id: 3,
-      post_title: "This bread is so delicious!! I'm going crazy.",
+      post_title: "Nordik Spa - Nature Quebec",
       post_content:
-        "My new fav. Cranberry Walnut Bread fresh made by wholefood",
-      user_id: 3,
-      post_collects: 5,
-      post_image:"http://localhost:8080/images/image2.jpg",
-      post_location: "Toronto",
-      post_latitude: 43.6532,
-      post_longitude: -79.3832,
-  
+        "It stands as the largest hot spring center in North America, perched atop a mountain, offering a genuine mountaintop water hot spring experience. Notably, it boasts the only high-salinity suspension pool in North America, allowing you to unwind and effortlessly float on the water.",
+      user_id: 20,
+      post_collects: 1400,
+      post_image:"http://localhost:8080/images/image14.jpg",
+      post_location: "Quebec",
+      post_latitude: 52.9399,
+      post_longitude: -73.5491,  
     },
     {
       id: 4,
@@ -179,15 +178,15 @@ exports.seed = async function(knex) {
     },
     {
       id: 15,
-      post_title: "Nordik Spa - Nature Quebec",
+      post_title: "This bread is so delicious!! I'm going crazy.",
       post_content:
-        "It stands as the largest hot spring center in North America, perched atop a mountain, offering a genuine mountaintop water hot spring experience. Notably, it boasts the only high-salinity suspension pool in North America, allowing you to unwind and effortlessly float on the water.",
-      user_id: 20,
-      post_collects: 1400,
-      post_image:"http://localhost:8080/images/image14.jpg",
-      post_location: "Quebec",
-      post_latitude: 52.9399,
-      post_longitude: -73.5491,
+        "My new fav. Cranberry Walnut Bread fresh made by wholefood",
+      user_id: 3,
+      post_collects: 5,
+      post_image:"http://localhost:8080/images/image2.jpg",
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
     },
     {
       id: 16,
