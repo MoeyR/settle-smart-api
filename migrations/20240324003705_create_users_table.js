@@ -8,6 +8,7 @@ exports.up = function(knex) {
       table.increments("id").primary();
       table.string("user_name").notNullable();
       table.string("user_email").notNullable();
+      table.string("user_icon").notNullable();
       table.timestamp("created_at").defaultTo(knex.fn.now());
       table
         .timestamp("updated_at")

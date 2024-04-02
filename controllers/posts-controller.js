@@ -12,7 +12,9 @@ const getOnePost = async (req, res) => {
                 "posts.post_content",
                 "posts.post_collects",
                 "posts.post_image",
-                "posts.post_location"
+                "posts.post_location",
+                "posts.post_latitude",
+                "posts.post_longitude"
             )
             .from("posts")
             .join("users", "posts.user_id", "users.id")
@@ -43,7 +45,8 @@ const getPosts = async (req, res) => {
                 "posts.post_content",
                 "posts.post_collects",
                 "posts.post_image",
-                "posts.post_location"
+                "posts.post_location",
+                "posts.created_at"
             )
             .from("posts")
             .join("users", "posts.user_id", "users.id")
@@ -105,8 +108,10 @@ const getPostComments = async (req, res) => {
             "comments.id",
             "comments.user_id",
             "users.user_name",
+            "users.user_icon",
             "comments.comment",
             "comments.comment_likes",
+            "comments.created_at"
         )
         .join("users", "comments.user_id", "users.id")
 

@@ -14,7 +14,9 @@ exports.seed = async function(knex) {
       user_id: 5,
       post_collects: 36,
       post_image:"http://localhost:8080/images/image0.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
     },
     {
       id: 2,
@@ -24,7 +26,9 @@ exports.seed = async function(knex) {
       user_id: 4,
       post_collects: 89,
       post_image:"http://localhost:8080/images/image1.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
     },
     {
       id: 3,
@@ -34,7 +38,9 @@ exports.seed = async function(knex) {
       user_id: 3,
       post_collects: 5,
       post_image:"http://localhost:8080/images/image2.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
   
     },
     {
@@ -44,7 +50,9 @@ exports.seed = async function(knex) {
       user_id: 2,
       post_collects: 1100,
       post_image:"http://localhost:8080/images/image3.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
     },
     {
       id: 5,
@@ -54,7 +62,9 @@ exports.seed = async function(knex) {
       user_id: 1,
       post_collects: 258,
       post_image:"http://localhost:8080/images/image4.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
     },
     {
       id: 6,
@@ -64,7 +74,9 @@ exports.seed = async function(knex) {
       user_id: 5,
       post_collects: 422, 
       post_image:"http://localhost:8080/images/image5.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
   
     },
     {
@@ -75,7 +87,9 @@ exports.seed = async function(knex) {
       user_id: 4,
       post_collects: 382,
       post_image:"http://localhost:8080/images/image6.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
   
     },
     {
@@ -86,7 +100,9 @@ exports.seed = async function(knex) {
       user_id: 3,
       post_collects: 216,
       post_image:"http://localhost:8080/images/image7.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
   
     },
     {
@@ -97,7 +113,9 @@ exports.seed = async function(knex) {
       user_id: 2,
       post_collects: 51,
       post_image:"http://localhost:8080/images/image8.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
     },
     {
       id: 10,
@@ -107,7 +125,81 @@ exports.seed = async function(knex) {
       user_id: 1,
       post_collects: 429,
       post_image:"http://localhost:8080/images/image9.jpg",
-      post_location: "Toronto"
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
+    },
+    {
+      id: 11,
+      post_title: "Boozy Chocolate Liqueur Cake",
+      post_content:
+        "Honey Honey Cakery - Located at Unionville. A Baileys chocolate cake with a liqueur center, a six-inch one, goes for around $40, while a 4-inch cake sells for about $20. It's affordable and scrumptious, with a silky cream that's not overwhelmingly alcoholic, and it boasts a rich chocolate flavor. Plus, the base of the cake is made with crushed oats.",
+      user_id: 20,
+      post_collects: 154,
+      post_image:"http://localhost:8080/images/image10.jpg",
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
+    },
+    {
+      id: 12,
+      post_title: "It feels as I'm having brunch in France.",
+      post_content:
+        "Only 20 minutes drive from Toronto - Old Mill Toronto Restaurant. Restaurant indoor: brunch buffet -  Saturday and Sunday 10:30am-2:30pm, $50 per person. Restaurant outdoor: A La Carte Dinning - open Thursday, Friday and Saturday",
+      user_id: 20,
+      post_collects: 449,
+      post_image:"http://localhost:8080/images/image11.jpg",
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
+    },
+    {
+      id: 13,
+      post_title: "DAINTIES MACARON",
+      post_content:
+        "Highly recommended: the Oreo Macaron Ice Cream Sandwich. It features ice cream sandwiched between two macarons. A regular macaron sells for $5, but these ones are generously sized! You can find them at 235 Spadina Ave. #2, Toronto, ON.",
+      user_id: 20,
+      post_collects: 773,
+      post_image:"http://localhost:8080/images/image12.jpg",
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
+    },
+    {
+      id: 14,
+      post_title: "This Ikea sideboard is a great value",
+      post_content:
+        "I recently purchased this cabinet. It has a substantial weight and texture to it. Similar cabinets from Article sell for over $1,000.",
+      user_id: 20,
+      post_collects: 774,
+      post_image:"http://localhost:8080/images/image13.jpg",
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
+    },
+    {
+      id: 15,
+      post_title: "Nordik Spa - Nature Quebec",
+      post_content:
+        "It stands as the largest hot spring center in North America, perched atop a mountain, offering a genuine mountaintop water hot spring experience. Notably, it boasts the only high-salinity suspension pool in North America, allowing you to unwind and effortlessly float on the water.",
+      user_id: 20,
+      post_collects: 1400,
+      post_image:"http://localhost:8080/images/image14.jpg",
+      post_location: "Quebec",
+      post_latitude: 52.9399,
+      post_longitude: -73.5491,
+    },
+    {
+      id: 16,
+      post_title: "Belfountain Conservation Area",
+      post_content:
+        "It's just an hour's drive from Toronto. This spot is perfect for autumn hikes. The scenic area offers full amenities, and the trails aren't overly long, making it very comfortable. Plus, it's an excellent location for photography.",
+      user_id: 20,
+      post_collects: 747,
+      post_image:"http://localhost:8080/images/image15.jpg",
+      post_location: "Toronto",
+      post_latitude: 43.6532,
+      post_longitude: -79.3832,
     }
   ]);
 };

@@ -24,7 +24,7 @@ exports.seed = async function(knex) {
       id: 3,
       post_id: 1,
       user_id: 8,
-      comment:"I'm at Waterloo! Anyone wfh here? Please contact me",
+      comment:"I live in Mississauga, also wfh.",
       comment_likes: 5
     }, 
     {
@@ -152,6 +152,48 @@ exports.seed = async function(knex) {
       user_id: 16,
       comment:"Danskin is very comfy",
       comment_likes: 8
+    }, 
+    {
+      id: 22,
+      post_id: 11,
+      user_id: 17,
+      comment:"It looks delicious! The price is also acceptable. I'll go try it.",
+      comment_likes: 8
+    }, 
+    {
+      id: 23,
+      post_id: 12,
+      user_id: 18,
+      comment:"The photo looks really nice! I'll try it out this weekend!",
+      comment_likes: 7
+    }, 
+    {
+      id: 24,
+      post_id: 13,
+      user_id: 19,
+      comment:"The ichatea on the left side of this store is also great!",
+      comment_likes: 6
+    }, 
+    {
+      id: 25,
+      post_id: 14,
+      user_id: 5,
+      comment:"It's out of stock here. lol",
+      comment_likes: 9
+    }, 
+    {
+      id: 26,
+      post_id: 15,
+      user_id: 4,
+      comment:"I must go there",
+      comment_likes: 10
+    }, 
+    {
+      id: 27,
+      post_id: 16,
+      user_id: 3,
+      comment:"The scenery here is really nice, but be careful about mosquitoes",
+      comment_likes: 3
     }
     
   ]);
